@@ -75,7 +75,8 @@ class MainActivity : AppCompatActivity() {
       // third target
       val thirdTarget = SimpleTarget.Builder(this@MainActivity)
           .setPoint(threeView)
-          .setShape(RoundedRectangle(threeWidth, threeHeight, 25f))
+          .setShape(
+              RoundedRectangle(threeView.height.toFloat() + 5f, threeView.width.toFloat() + 5f, 0f))
           .setTitle("third title")
           .setDescription("third description")
           .setOverlayPoint(100f, y - threeHeight - 300)
@@ -101,7 +102,7 @@ class MainActivity : AppCompatActivity() {
           .start()
     }
 
-    findViewById<View>(R.id.custom_target).setOnClickListener { _ ->
+    findViewById<View>(R.id.custom_target).setOnClickListener {
       val inflater = LayoutInflater.from(this@MainActivity)
 
       val targets = ArrayList<Target>()
