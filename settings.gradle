@@ -1,1 +1,1 @@
-include ':app', ':spotlight'
+include ':sample-kt', ':spotlight', ':sample'
